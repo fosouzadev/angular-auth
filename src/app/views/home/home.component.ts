@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  userName: string | null = '';
+  
+  constructor(private router: Router){}
 
-  constructor(private route: ActivatedRoute) {
-  }
-
-  ngOnInit() {
-    this.userName = this.route.snapshot.paramMap.get('userName');
+  logOut() {
+    localStorage.removeItem('auth');
+    
+    this.router.navigate(['/']);
   }
 
 }

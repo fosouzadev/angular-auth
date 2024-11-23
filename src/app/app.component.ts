@@ -10,5 +10,4 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-frontend';
-  user = 'fosouza';
 }

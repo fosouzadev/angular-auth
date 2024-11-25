@@ -6,8 +6,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: "clientId",
-      authority: "https://login.microsoftonline.com/tenantId",
+      clientId: "{{clientId}}",
+      authority: "https://login.microsoftonline.com/{{tenantId}}",
       redirectUri: "http://localhost:4200",
     },
     cache: {

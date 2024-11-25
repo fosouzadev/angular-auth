@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { MsalService } from '@azure/msal-angular';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { TokenService } from '../../services/token.service';
 
 type ProfileType = {
